@@ -1,0 +1,1390 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pirnazarov Arslan - Backend/DataBase Developer</title>
+
+        <!-- Bootstrap 5 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Bootstrap Icons -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+            rel="stylesheet"
+        />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- AOS Animations -->
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- CANVAS BACKGROUND -->
+        <canvas id="bg-canvas"></canvas>
+
+        <!-- ===================== NAVBAR ===================== -->
+        <nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand logo-text" href="#hero">
+                    <span class="accent">&lt;</span>Pirnazarov Arslan<span
+                        class="accent"
+                        >/&gt;</span
+                    >
+                </a>
+                <button
+                    class="navbar-toggler border-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navMenu"
+                >
+                    <span class="toggler-icon"
+                        ><i class="bi bi-grid-3x3-gap-fill"></i
+                    ></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav ms-auto gap-1 align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link nav-pill" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-pill" href="#skills"
+                                >Skills</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-pill" href="#experience"
+                                >Experience</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-pill" href="#projects"
+                                >Projects</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-pill" href="#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-pill" href="#contact"
+                                >Contact</a
+                            >
+                        </li>
+                        <li class="nav-item ms-2">
+                            <button
+                                class="theme-toggle"
+                                id="themeToggle"
+                                title="Toggle theme"
+                            >
+                                <i class="bi bi-sun-fill"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ===================== HERO ===================== -->
+        <section id="hero" class="hero-section d-flex align-items-center">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div
+                        class="col-lg-7"
+                        data-aos="fade-right"
+                        data-aos-duration="900"
+                    >
+                        <p class="hero-greeting">
+                            <span class="accent font-mono">$</span> whoami
+                        </p>
+                        <h1 class="hero-title">
+                            Hey, I'm
+                            <span class="gradient-text">Arslan</span>
+                        </h1>
+                        <h2 class="hero-subtitle">
+                            <span id="typed-text"></span
+                            ><span class="typed-cursor">|</span>
+                        </h2>
+                        <p class="hero-desc mt-3">
+                            <!-- TODO: Replace with your personal tagline -->
+                            I craft elegant, high-performance software — from
+                            pixel-perfect UIs to battle-tested back-end systems.
+                            Open source enthusiast &amp; constant learner.
+                        </p>
+                        <div class="hero-badges mt-3 mb-4">
+                            <span class="badge-pill">
+                                <i class="bi bi-geo-alt-fill me-1"></i> Tashkent, Uzbekistan
+                            </span>
+                            <span class="badge-pill">
+                                <i
+                                    class="bi bi-circle-fill blink me-1 text-success"
+                                    style="font-size: 0.6rem"
+                                ></i
+                                >Available for work
+                            </span>
+                            <span class="badge-pill">
+                                <i class="bi bi-translate me-1"></i>EN / RU / JP
+                            </span>
+                        </div>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#projects" class="btn-primary-custom">
+                                <i class="bi bi-rocket-takeoff me-2"></i>View My
+                                Work
+                            </a>
+                            <a href="#contact" class="btn-outline-custom">
+                                <i class="bi bi-chat-dots me-2"></i>Let's Talk
+                            </a>
+                            <!-- TODO: Replace with your actual CV/resume link -->
+                            <a
+                                href="YOUR_CV_LINK_HERE"
+                                target="_blank"
+                                class="btn-ghost-custom"
+                            >
+                                <i class="bi bi-file-earmark-person me-2"></i
+                                >Download CV
+                            </a>
+                        </div>
+                        <div class="social-links mt-4">
+                            <!-- TODO: Replace placeholder URLs with your real profile links -->
+                            <a
+                                href="https://github.com/PlayErsGames666"
+                                target="_blank"
+                                class="social-icon"
+                                title="GitHub"
+                                ><i class="bi bi-github"></i
+                            ></a>
+                            <a
+                                href="https://www.linkedin.com/in/mr-playersgames-52a822374/"
+                                target="_blank"
+                                class="social-icon"
+                                title="LinkedIn"
+                                ><i class="bi bi-linkedin"></i
+                            ></a>
+                            <a
+                                href="https://t.me/PLAYERSGAMES01"
+                                target="_blank"
+                                class="social-icon"
+                                title="Telegram"
+                                ><i class="bi bi-telegram"></i
+                            ></a>
+                            <a
+                                href="mailto:playersgames.ru@gmail.com"
+                                class="social-icon"
+                                title="Email"
+                                ><i class="bi bi-envelope-fill"></i
+                            ></a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="col-lg-5 text-center"
+                        data-aos="fade-left"
+                        data-aos-duration="900"
+                    >
+                        <div class="hero-avatar-wrap">
+                            <div class="avatar-ring"></div>
+                            <div class="avatar-ring ring2"></div>
+                            <!-- TODO: Replace src with your actual photo path or URL -->
+                            <img
+                                src="avatar.webp"
+                                alt="Avatar"
+                                class="hero-avatar"
+                                id="heroAvatar"
+                            />
+                            <div class="avatar-badge">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                        </div>
+                        <div class="stats-row mt-4">
+                            <div class="stat-card">
+                                <!-- TODO: Update numbers to match your real stats -->
+                                <span class="stat-num counter" data-target="3"
+                                    >0</span
+                                ><span class="stat-num">+</span>
+                                <span class="stat-label">Years Exp.</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-num counter" data-target="15"
+                                    >0</span
+                                ><span class="stat-num">+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-num counter" data-target="1"
+                                    >0</span
+                                ><span class="stat-num">k+</span>
+                                <span class="stat-label">Commits</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span></span><span></span><span></span>
+            </div>
+        </section>
+
+        <!-- ===================== ABOUT ===================== -->
+        <section id="about" class="section-pad bg-alt">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">01. about_me.md</span>
+                    <h2 class="section-title">
+                        About <span class="gradient-text">Me</span>
+                    </h2>
+                </div>
+                <div class="row g-5 align-items-center mt-2">
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <div class="about-terminal">
+                            <div class="terminal-header">
+                                <span class="dot red"></span
+                                ><span class="dot yellow"></span
+                                ><span class="dot green"></span>
+                                <span class="terminal-title ms-2"
+                                    >~/profile.json</span
+                                >
+                            </div>
+                            <div class="terminal-body">
+                                <p>
+                                    <span class="t-cmd">$ cat</span>
+                                    <span class="t-arg">profile.json</span>
+                                </p>
+                                <p class="t-out">{</p>
+                                <!-- TODO: Fill in your personal details below -->
+                                <p class="t-out">
+                                    &nbsp;&nbsp;<span class="t-key">"name"</span
+                                    >:
+                                    <span class="t-val">"Arslan Pirnazarov"</span>,
+                                </p>
+                                <p class="t-out">
+                                    &nbsp;&nbsp;<span class="t-key">"age"</span
+                                    >: <span class="t-val">21</span>,
+                                </p>
+                                <p class="t-out">
+                                    &nbsp;&nbsp;<span class="t-key">"role"</span
+                                    >:
+                                    <span class="t-val"
+                                        >"Backend / Data Base Developer"</span
+                                    >,
+                                </p>
+                                <p class="t-out">
+                                    &nbsp;&nbsp;<span class="t-key"
+                                        >"location"</span
+                                    >: <span class="t-val">"Tashkent"</span>,
+                                </p>
+                                <p class="t-out">
+                                    &nbsp;&nbsp;<span class="t-key"
+                                        >"education"</span
+                                    >:
+                                    <span class="t-val">"International Digital UNIVERSITY"</span
+                                    >,
+                                </p>
+                                <p class="t-out">
+                                    &nbsp;&nbsp;<span class="t-key"
+                                        >"hobby"</span
+                                    >: [<span class="t-val">"Open Source"</span
+                                    >, <span class="t-val">"Gaming"</span>,
+                                    <span class="t-val">"Music"</span>],
+                                </p>
+                                <p class="t-out">
+                                    &nbsp;&nbsp;<span class="t-key"
+                                        >"coffee_per_day"</span
+                                    >: <span class="t-val">NONE</span>
+                                </p>
+                                <p class="t-out">}</p>
+                                <p class="mt-2">
+                                    <span class="t-cmd">$ </span
+                                    ><span class="cursor-blink"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <h3 class="about-heading">
+                            Passionate Developer &amp; Problem Solver
+                        </h3>
+                        <!-- TODO: Replace the paragraphs below with your personal story -->
+                        <p class="about-text">
+                            I'm a <strong>Backend/DataBase Developer</strong> with a
+                            deep love for building things that live on the
+                            internet. My journey started when I wrote my first
+                            "Hello World" and realized — this is what I want to
+                            do for the rest of my life.
+                        </p>
+                        <p class="about-text">
+                            Over the years I've worked on
+                            <strong
+                                >startups, freelance projects, and open-source
+                                contributions</strong
+                            >, constantly pushing myself to write cleaner,
+                            faster, and smarter code. I believe great software
+                            is not just functional — it's <em>a joy to use</em>.
+                        </p>
+                        <p class="about-text">
+                            <!-- TODO: Add your personal hobbies / extra info -->
+                            When I'm not coding, you'll find me reading tech
+                            blogs, contributing to open source, or exploring the
+                            world with my camera.
+                        </p>
+                        <div class="about-facts mt-4">
+                            <!-- TODO: Replace each fact with your real details -->
+                            <div class="fact-item">
+                                <i class="bi bi-mortarboard-fill"></i>
+                                <span
+                                    >B.Sc. in Cyber Security —
+                                    <strong>IDU</strong>
+                                    (4)</span
+                                >
+                            </div>
+                            <div class="fact-item">
+                                <i class="bi bi-briefcase-fill"></i>
+                                <span
+                                    >Currently @
+                                    <strong
+                                        >FREELANCE</strong
+                                    ></span
+                                >
+                            </div>
+                            <div class="fact-item">
+                                <i class="bi bi-trophy-fill"></i>
+                                <span
+                                    >Not Yet</span
+                                >
+                            </div>
+                            <div class="fact-item">
+                                <i class="bi bi-heart-fill"></i>
+                                <span
+                                    >Open Source Contributor —
+                                    <a
+                                        href="https://github.com/PlayErsGames666"
+                                        target="_blank"
+                                        class="accent-link"
+                                        >PlayErsGames666</a
+                                    ></span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SKILLS ===================== -->
+        <section id="skills" class="section-pad">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">02. skills.json</span>
+                    <h2 class="section-title">
+                        Tech <span class="gradient-text">Stack</span>
+                    </h2>
+                </div>
+
+                <ul
+                    class="skill-tabs mt-4 justify-content-center"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+                    <li>
+                        <button class="skill-tab active" data-target="frontend">
+                            💻 Coding
+                        </button>
+                    </li>
+                    <li>
+                        <button class="skill-tab" data-target="backend">
+                            🗄 DB &amp; Tools
+                        </button>
+                    </li>
+                    <li>
+                        <button class="skill-tab" data-target="devops">
+                            🌍 Other
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- Программирование -->
+                <div
+                    id="frontend"
+                    class="skill-panel active"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                >
+                    <div class="row g-4 mt-1">
+                        <div class="col-md-6">
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label">
+                                    <span>🐍 Python</span
+                                    ><span class="skill-pct">40%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-pct="40"></div>
+                                </div>
+                                <small class="text-muted"
+                                    >Syntax, small programs, turtle,
+                                    keyboard — a confident beginner</small
+                                >
+                            </div>
+                            <div class="skill-bar-item mt-3">
+                                <div class="skill-bar-label">
+                                    <span>🤖 Telegram-bots</span
+                                    ><span class="skill-pct">55%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-pct="55"></div>
+                                </div>
+                                <small class="text-muted"
+                                    >Real tasks, project structure, and environment — practical level</small
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label">
+                                    <span>🌐 Web-Development</span
+                                    ><span class="skill-pct">25%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-pct="25"></div>
+                                </div>
+                                <small class="text-muted"
+                                    >Basic understanding, structure
+                                    projects</small
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- БД и Инструменты -->
+                <div
+                    id="backend"
+                    class="skill-panel"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                >
+                    <div class="row g-4 mt-1">
+                        <div class="col-md-6">
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label">
+                                    <span>🗄 SQL / PostgreSQL</span
+                                    ><span class="skill-pct">20%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-pct="20"></div>
+                                </div>
+                                <small class="text-muted"
+                                    >Learning SQL, first steps with PostgreSQL,
+                                    real DB in the project - initial</small
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label">
+                                    <span>🌐 Git</span
+                                    ><span class="skill-pct">45%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-pct="45"></div>
+                                </div>
+                                <small class="text-muted"
+                                    >push, merge, conflicts, .gitignore,
+                                    multiple projects — confident
+                                    basic</small
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Другое -->
+                <div
+                    id="devops"
+                    class="skill-panel"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                >
+                    <div class="row g-4 mt-1">
+                        <div class="col-md-6">
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label">
+                                    <span>🌍 Japanese Language</span
+                                    ><span class="skill-pct">20%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-pct="20"></div>
+                                </div>
+                                <small class="text-muted"
+                                    >N4</small
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech badge cloud -->
+                <div class="tech-badges mt-5" data-aos="fade-up">
+                    <span class="tech-badge"
+                        ><i class="bi bi-filetype-py me-1"></i>Python</span
+                    >
+                    <span class="tech-badge">Telegram Bot API</span>
+                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">Git</span>
+                    <span class="tech-badge">GitHub</span>
+                    <span class="tech-badge">turtle</span>
+                    <span class="tech-badge">keyboard</span>
+                    <span class="tech-badge">Wev-Dev</span>
+                    <span class="tech-badge">日本語</span>
+                    <span class="tech-badge">VCS</span>
+                    <span class="tech-badge">virtualenv</span>
+                    <span class="tech-badge">.gitignore</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== EXPERIENCE ===================== -->
+        <section id="experience" class="section-pad bg-alt">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">03. experience.log</span>
+                    <h2 class="section-title">
+                        Work <span class="gradient-text">Experience</span>
+                    </h2>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="timeline">
+                            <!-- TODO: Replace each timeline entry with your real work history -->
+                            <div
+                                class="timeline-item"
+                                data-aos="fade-up"
+                                data-aos-delay="200"
+                            >
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <div class="timeline-period">
+                                        <i class="bi bi-calendar3 me-2"></i>2019
+                                        — 2026
+                                    </div>
+                                    <div class="timeline-role">
+                                        Junior Developer / Freelancer
+                                    </div>
+                                    <div class="timeline-company">
+                                        Freelance
+                                    </div>
+                                    <p class="timeline-desc">
+                                        <!-- TODO: Add early career details -->
+                                        Developed landing pages, e-commerce
+                                        solutions, and REST APIs for various
+                                        clients. Gained expertise in performance
+                                        optimization and responsive design.
+                                    </p>
+                                    <div class="timeline-tags">
+                                        <span class="timeline-tag"
+                                            >HTML/CSS</span
+                                        >
+                                        <span class="timeline-tag"
+                                            >JavaScript</span
+                                        >
+                                        <span class="timeline-tag">Django</span>
+                                        <span class="timeline-tag">PostgreSQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PROJECTS ===================== -->
+        <section id="projects" class="section-pad">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">04. projects/</span>
+                    <h2 class="section-title">
+                        Featured <span class="gradient-text">Projects</span>
+                    </h2>
+                </div>
+
+                <div
+                    class="filter-btns mt-4"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+                    <button class="filter-btn active" data-filter="all">
+                        All
+                    </button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="api">API</button>
+                    <button class="filter-btn" data-filter="ml">ML / AI</button>
+                    <button class="filter-btn" data-filter="tool">Tool</button>
+                </div>
+
+                <div class="row g-4 mt-2" id="projectsGrid">
+                    <!-- PROJECT 1 — TODO: Replace with your real project data -->
+<!-- /*
+                    <div
+                        class="col-lg-4 col-md-6 project-item"
+                        data-category="web"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        <div class="project-card">
+                            <div class="project-img-wrap">
+                                <img
+                                    src="https://via.placeholder.com/600x340/0f172a/7c3aed?text=Project+1"
+                                    alt="Project 1"
+                                    class="project-img"
+                                />
+                                <div class="project-overlay">
+                                    <!-- TODO: Add your live URL and GitHub repo URL 
+                                    <a
+                                        href="YOUR_LIVE_URL_1"
+                                        target="_blank"
+                                        class="overlay-btn"
+                                        ><i
+                                            class="bi bi-box-arrow-up-right"
+                                        ></i>
+                                        Live</a
+                                    >
+                                    <a
+                                        href="YOUR_GITHUB_REPO_1"
+                                        target="_blank"
+                                        class="overlay-btn"
+                                        ><i class="bi bi-github"></i> Code</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="project-body">
+                                <div
+                                    class="d-flex align-items-center gap-2 mb-2"
+                                >
+                                    <span class="project-tag">Web App</span>
+                                    <span class="project-tag featured"
+                                        ><i class="bi bi-star-fill me-1"></i
+                                        >Featured</span
+                                    >
+                                </div>
+                                <h4 class="project-title">YOUR PROJECT NAME</h4>
+                                <p class="project-desc">
+                                    <!-- TODO: Describe your project -
+                                    A full-stack web application that solves
+                                    [problem]. Built with scalability and
+                                    performance in mind, handling thousands of
+                                    concurrent users.
+                                </p>
+                                <div class="project-stack">
+                                    <span>React</span><span>Node.js</span
+                                    ><span>PostgreSQL</span><span>Docker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 2 -
+                    <div
+                        class="col-lg-4 col-md-6 project-item"
+                        data-category="api"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                    >
+                        <div class="project-card">
+                            <div class="project-img-wrap">
+                                <img
+                                    src="https://via.placeholder.com/600x340/0f172a/06b6d4?text=Project+2"
+                                    alt="Project 2"
+                                    class="project-img"
+                                />
+                                <div class="project-overlay">
+                                    <a
+                                        href="YOUR_LIVE_URL_2"
+                                        target="_blank"
+                                        class="overlay-btn"
+                                        ><i
+                                            class="bi bi-box-arrow-up-right"
+                                        ></i>
+                                        Live</a
+                                    >
+                                    <a
+                                        href="YOUR_GITHUB_REPO_2"
+                                        target="_blank"
+                                        class="overlay-btn"
+                                        ><i class="bi bi-github"></i> Code</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="project-body">
+                                <div
+                                    class="d-flex align-items-center gap-2 mb-2"
+                                >
+                                    <span class="project-tag">REST API</span>
+                                </div>
+                                <h4 class="project-title">
+                                    YOUR PROJECT NAME 2
+                                </h4>
+                                <p class="project-desc">
+                                    High-performance REST API with JWT auth,
+                                    rate limiting, and comprehensive docs.
+                                    Serving X requests/day.
+                                </p>
+                                <div class="project-stack">
+                                    <span>FastAPI</span><span>Redis</span
+                                    ><span>MongoDB</span><span>AWS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 3 -
+                    <div
+                        class="col-lg-4 col-md-6 project-item"
+                        data-category="ml"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="project-card">
+                            <div class="project-img-wrap">
+                                <img
+                                    src="https://via.placeholder.com/600x340/0f172a/10b981?text=Project+3"
+                                    alt="Project 3"
+                                    class="project-img"
+                                />
+                                <div class="project-overlay">
+                                    <a
+                                        href="YOUR_LIVE_URL_3"
+                                        target="_blank"
+                                        class="overlay-btn"
+                                        ><i
+                                            class="bi bi-box-arrow-up-right"
+                                        ></i>
+                                        Live</a
+                                    >
+                                    <a
+                                        href="YOUR_GITHUB_REPO_3"
+                                        target="_blank"
+                                        class="overlay-btn"
+                                        ><i class="bi bi-github"></i> Code</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="project-body">
+                                <div
+                                    class="d-flex align-items-center gap-2 mb-2"
+                                >
+                                    <span class="project-tag">ML / AI</span>
+                                </div>
+                                <h4 class="project-title">
+                                    YOUR PROJECT NAME 3
+                                </h4>
+                                <p class="project-desc">
+                                    ML model for [task] achieving X% accuracy.
+                                    Deployed as microservice with real-time
+                                    inference.
+                                </p>
+                                <div class="project-stack">
+                                    <span>Python</span><span>TensorFlow</span
+                                    ><span>FastAPI</span><span>Docker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 4 -
+                    <div
+                        class="col-lg-4 col-md-6 project-item"
+                        data-category="tool"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        <div class="project-card">
+                            <div class="project-img-wrap">
+                                <img
+                                    src="https://via.placeholder.com/600x340/0f172a/f59e0b?text=Project+4"
+                                    alt="Project 4"
+                                    class="project-img"
+                                />
+                                <div class="project-overlay">
+                                    <a
+                                        href="YOUR_LIVE_URL_4"
+                                        target="_blank"
+                                        class="overlay-btn"
+                                        ><i
+                                            class="bi bi-box-arrow-up-right"
+                                        ></i>
+                                        Live</a
+                                    >
+                                    <a
+                                        href="YOUR_GITHUB_REPO_4"
+                                        target="_blank"
+                                        class="overlay-btn"
+                                        ><i class="bi bi-github"></i> Code</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="project-body">
+                                <div
+                                    class="d-flex align-items-center gap-2 mb-2"
+                                >
+                                    <span class="project-tag">CLI Tool</span>
+                                </div>
+                                <h4 class="project-title">
+                                    YOUR PROJECT NAME 4
+                                </h4>
+                                <p class="project-desc">
+                                    A developer tool that automates [workflow].
+                                    Saves X hours/week for teams with plugin
+                                    support and extensible architecture.
+                                </p>
+                                <div class="project-stack">
+                                    <span>Go</span><span>CLI</span
+                                    ><span>Bash</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 5 -
+                    <div
+                        class="col-lg-4 col-md-6 project-item"
+                        data-category="web"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                    >
+                        <div class="project-card">
+                            <div class="project-img-wrap">
+                                <img
+                                    src="https://via.placeholder.com/600x340/0f172a/ec4899?text=Project+5"
+                                    alt="Project 5"
+                                    class="project-img"
+                                />
+                                <div class="project-overlay">
+                                    <a
+                                        href="YOUR_LIVE_URL_5"
+                                        target="_blank"
+                                        class="overlay-btn"
+                                        ><i
+                                            class="bi bi-box-arrow-up-right"
+                                        ></i>
+                                        Live</a
+                                    >
+                                    <a
+                                        href="YOUR_GITHUB_REPO_5"
+                                        target="_blank"
+                                        class="overlay-btn"
+                                        ><i class="bi bi-github"></i> Code</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="project-body">
+                                <div
+                                    class="d-flex align-items-center gap-2 mb-2"
+                                >
+                                    <span class="project-tag">SaaS</span>
+                                </div>
+                                <h4 class="project-title">
+                                    YOUR PROJECT NAME 5
+                                </h4>
+                                <p class="project-desc">
+                                    SaaS platform for [use case] with
+                                    subscription billing, multi-tenancy, and
+                                    real-time WebSocket dashboard.
+                                </p>
+                                <div class="project-stack">
+                                    <span>Next.js</span><span>Stripe</span
+                                    ><span>Prisma</span><span>Vercel</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 6 -
+                    <div
+                        class="col-lg-4 col-md-6 project-item"
+                        data-category="api"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="project-card">
+                            <div class="project-img-wrap">
+                                <img
+                                    src="https://via.placeholder.com/600x340/0f172a/3b82f6?text=Project+6"
+                                    alt="Project 6"
+                                    class="project-img"
+                                />
+                                <div class="project-overlay">
+                                    <a
+                                        href="YOUR_LIVE_URL_6"
+                                        target="_blank"
+                                        class="overlay-btn"
+                                        ><i
+                                            class="bi bi-box-arrow-up-right"
+                                        ></i>
+                                        Live</a
+                                    >
+                                    <a
+                                        href="YOUR_GITHUB_REPO_6"
+                                        target="_blank"
+                                        class="overlay-btn"
+                                        ><i class="bi bi-github"></i> Code</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="project-body">
+                                <div
+                                    class="d-flex align-items-center gap-2 mb-2"
+                                >
+                                    <span class="project-tag">Open Source</span>
+                                </div>
+                                <h4 class="project-title">
+                                    YOUR PROJECT NAME 6
+                                </h4>
+                                <p class="project-desc">
+                                    Open-source library with X+ GitHub stars.
+                                    Helps developers solve [problem] with a
+                                    simple, elegant API.
+                                </p>
+                                <div class="project-stack">
+                                    <span>TypeScript</span><span>npm</span
+                                    ><span>Jest</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- /row -->
+
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <!-- TODO: Replace with your actual GitHub profile -->
+                    <a
+                        href="https://github.com/PlayErsGames666"
+                        target="_blank"
+                        class="btn-outline-custom"
+                    >
+                        <i class="bi bi-github me-2"></i>View All Projects on
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+<!-- 
+        <!-- ===================== BLOG ===================== --
+        <section id="blog" class="section-pad bg-alt">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">05. blog/</span>
+                    <h2 class="section-title">
+                        Latest <span class="gradient-text">Articles</span>
+                    </h2>
+                </div>
+                <p
+                    class="text-center mt-2"
+                    style="
+                        color: var(--text-muted);
+                        max-width: 520px;
+                        margin: 0 auto 48px;
+                    "
+                    data-aos="fade-up"
+                >
+                    I write about software architecture, performance, developer
+                    tooling, and lessons learned the hard way.
+                </p>
+
+                <div class="row g-4">
+                    <!-- BLOG POST 1 — TODO: Replace with your real articles --
+                    <div
+                        class="col-lg-4 col-md-6"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        <div class="blog-card">
+                            <div class="blog-img-wrap">
+                                <img
+                                    src="https://via.placeholder.com/600x340/0f172a/7c3aed?text=Article+1"
+                                    alt="Blog 1"
+                                    class="blog-img"
+                                />
+                            </div>
+                            <div class="blog-body">
+                                <div class="blog-meta">
+                                    <span class="blog-cat">Architecture</span>
+                                    <span
+                                        ><i class="bi bi-calendar3 me-1"></i>Jan
+                                        15, 2025</span
+                                    >
+                                    <span
+                                        ><i class="bi bi-clock me-1"></i>8 min
+                                        read</span
+                                    >
+                                </div>
+                                <h3 class="blog-title">
+                                    <!-- TODO: Replace with your article title and link --
+                                    <a href="YOUR_ARTICLE_URL_1" target="_blank"
+                                        >YOUR ARTICLE TITLE — e.g. "Why I
+                                        Switched from REST to GraphQL"</a
+                                    >
+                                </h3>
+                                <p class="blog-excerpt">
+                                    <!-- TODO: Replace with your article excerpt --
+                                    A deep dive into the trade-offs between REST
+                                    and GraphQL, with real-world benchmarks and
+                                    migration strategies from production
+                                    systems.
+                                </p>
+                                <div class="blog-footer">
+                                    <a
+                                        href="YOUR_ARTICLE_URL_1"
+                                        target="_blank"
+                                        class="blog-read-more"
+                                        >Read more
+                                        <i class="bi bi-arrow-right"></i
+                                    ></a>
+                                    <span
+                                        style="
+                                            font-size: 0.78rem;
+                                            color: var(--text-dim);
+                                        "
+                                        ><i class="bi bi-eye me-1"></i>2.4k
+                                        views</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BLOG POST 2 --
+                    <div
+                        class="col-lg-4 col-md-6"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                    >
+                        <div class="blog-card">
+                            <div class="blog-img-wrap">
+                                <img
+                                    src="https://via.placeholder.com/600x340/0f172a/06b6d4?text=Article+2"
+                                    alt="Blog 2"
+                                    class="blog-img"
+                                />
+                            </div>
+                            <div class="blog-body">
+                                <div class="blog-meta">
+                                    <span class="blog-cat">Performance</span>
+                                    <span
+                                        ><i class="bi bi-calendar3 me-1"></i>Dec
+                                        28, 2024</span
+                                    >
+                                    <span
+                                        ><i class="bi bi-clock me-1"></i>12 min
+                                        read</span
+                                    >
+                                </div>
+                                <h3 class="blog-title">
+                                    <a href="YOUR_ARTICLE_URL_2" target="_blank"
+                                        >YOUR ARTICLE TITLE 2 — e.g. "10x Your
+                                        Node.js API Speed"</a
+                                    >
+                                </h3>
+                                <p class="blog-excerpt">
+                                    <!-- TODO: Replace with your article excerpt --
+                                    Practical techniques for squeezing every
+                                    millisecond out of your Node.js APIs — from
+                                    connection pooling to in-memory caching.
+                                </p>
+                                <div class="blog-footer">
+                                    <a
+                                        href="YOUR_ARTICLE_URL_2"
+                                        target="_blank"
+                                        class="blog-read-more"
+                                        >Read more
+                                        <i class="bi bi-arrow-right"></i
+                                    ></a>
+                                    <span
+                                        style="
+                                            font-size: 0.78rem;
+                                            color: var(--text-dim);
+                                        "
+                                        ><i class="bi bi-eye me-1"></i>5.1k
+                                        views</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BLOG POST 3 --
+                    <div
+                        class="col-lg-4 col-md-6"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="blog-card">
+                            <div class="blog-img-wrap">
+                                <img
+                                    src="https://via.placeholder.com/600x340/0f172a/10b981?text=Article+3"
+                                    alt="Blog 3"
+                                    class="blog-img"
+                                />
+                            </div>
+                            <div class="blog-body">
+                                <div class="blog-meta">
+                                    <span class="blog-cat">DevOps</span>
+                                    <span
+                                        ><i class="bi bi-calendar3 me-1"></i>Dec
+                                        10, 2024</span
+                                    >
+                                    <span
+                                        ><i class="bi bi-clock me-1"></i>6 min
+                                        read</span
+                                    >
+                                </div>
+                                <h3 class="blog-title">
+                                    <a href="YOUR_ARTICLE_URL_3" target="_blank"
+                                        >YOUR ARTICLE TITLE 3 — e.g.
+                                        "Zero-Downtime Deployments with
+                                        Docker"</a
+                                    >
+                                </h3>
+                                <p class="blog-excerpt">
+                                    <!-- TODO: Replace with your article excerpt --
+                                    Step-by-step guide to achieving
+                                    zero-downtime deployments using Docker,
+                                    Nginx, and a blue-green deployment strategy.
+                                </p>
+                                <div class="blog-footer">
+                                    <a
+                                        href="YOUR_ARTICLE_URL_3"
+                                        target="_blank"
+                                        class="blog-read-more"
+                                        >Read more
+                                        <i class="bi bi-arrow-right"></i
+                                    ></a>
+                                    <span
+                                        style="
+                                            font-size: 0.78rem;
+                                            color: var(--text-dim);
+                                        "
+                                        ><i class="bi bi-eye me-1"></i>3.7k
+                                        views</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row --
+
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <!-- TODO: Replace with your actual blog/Medium/DEV.to URL --
+                    <a
+                        href="YOUR_BLOG_URL"
+                        target="_blank"
+                        class="btn-outline-custom"
+                    >
+                        <i class="bi bi-journal-code me-2"></i>Read All Articles
+                    </a>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- ===================== CONTACT ===================== -->
+        <section id="contact" class="section-pad">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">06. contact.sh</span>
+                    <h2 class="section-title">
+                        Get In <span class="gradient-text">Touch</span>
+                    </h2>
+                </div>
+                <p
+                    class="text-center mt-2"
+                    style="
+                        color: var(--text-muted);
+                        max-width: 500px;
+                        margin: 0 auto 50px;
+                    "
+                    data-aos="fade-up"
+                >
+                    Whether you have a project in mind, want to collaborate, or
+                    just want to say hi — my inbox is always open.
+                </p>
+
+                <div class="row g-5 align-items-start">
+                    <!-- Contact Info -->
+                    <div class="col-lg-4" data-aos="fade-right">
+                        <div class="contact-card">
+                            <h4 class="mb-4" style="font-weight: 700">
+                                Contact Info
+                            </h4>
+
+                            <!-- TODO: Replace all contact details with your real info -->
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-label">Email</div>
+                                    <div class="contact-val">
+                                        <a href="mailto:YOUR_EMAIL@example.com"
+                                            >playersgames.ru@gmail.com</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="bi bi-telegram"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-label">Telegram</div>
+                                    <div class="contact-val">
+                                        <a
+                                            href="YOUR_TELEGRAM_URL"
+                                            target="_blank"
+                                            >https://t.me/PLAYERSGAMES01</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="bi bi-linkedin"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-label">LinkedIn</div>
+                                    <div class="contact-val">
+                                        <a
+                                            href="YOUR_LINKEDIN_URL"
+                                            target="_blank"
+                                            >https://www.linkedin.com/in/mr-playersgames-52a822374/</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-label">Location</div>
+                                    <div class="contact-val">
+                                        Tashkent, Uzbekistan
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-social mt-4 d-flex gap-3">
+                                <a
+                                    href="https://github.com/PlayErsGames666"
+                                    target="_blank"
+                                    class="social-icon"
+                                    title="GitHub"
+                                    ><i class="bi bi-github"></i
+                                ></a>
+                                <a
+                                    href="https://www.linkedin.com/in/mr-playersgames-52a822374/"
+                                    target="_blank"
+                                    class="social-icon"
+                                    title="LinkedIn"
+                                    ><i class="bi bi-linkedin"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+
+        <!-- ===================== FOOTER ===================== -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-top row align-items-center g-4">
+                    <div class="col-md-4">
+                        <a class="logo-text" href="#hero">
+                            <span class="accent">&lt;</span>Arslan Pirnazarov<span
+                                class="accent"
+                                >/&gt;</span
+                            >
+                        </a>
+                        <p class="footer-desc mt-2">
+                            Building the future, one commit at a time.
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-md-center">
+                        <div class="footer-nav">
+                            <a href="#about">About</a>
+                            <a href="#skills">Skills</a>
+                            <a href="#projects">Projects</a>
+                            <a href="#blog">Blog</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <div class="social-links justify-content-md-end">
+                            <a
+                                href="https://github.com/PlayErsGames666"
+                                target="_blank"
+                                class="social-icon"
+                                title="GitHub"
+                                ><i class="bi bi-github"></i
+                            ></a>
+                            <a
+                                href="https://www.linkedin.com/in/mr-playersgames-52a822374/"
+                                target="_blank"
+                                class="social-icon"
+                                title="LinkedIn"
+                                ><i class="bi bi-linkedin"></i
+                            ></a>
+                            <a
+                                href="https://t.me/PLAYERSGAMES01"
+                                target="_blank"
+                                class="social-icon"
+                                title="Telegram"
+                                ><i class="bi bi-telegram"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>
+                        <!-- TODO: Replace YOUR NAME with your actual name -->
+                        Designed &amp; Built by
+                        <span class="accent">Arslan</span> &mdash;
+                        <span id="footerYear"></span> &mdash; All rights
+                        reserved.
+                    </p>
+                    <p
+                        style="
+                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-size: 0.72rem;
+                            color: var(--text-dim);
+                            margin-top: 6px;
+                        "
+                    >
+                        // Made with <span class="accent">&#10084;</span>,
+                        caffeine &amp; way too many Stack Overflow tabs
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back-to-top button -->
+        <button class="back-to-top" id="backToTop" title="Back to top">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+
+        <!-- ===================== SCRIPTS ===================== -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
