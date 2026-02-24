@@ -123,7 +123,6 @@ function initTyping() {
   if (!el) return;
 
   const phrases = [
-    'Full Stack Developer',
     'Open Source Contributor',
     'Backend Architect',
     'UI / UX Enthusiast',
