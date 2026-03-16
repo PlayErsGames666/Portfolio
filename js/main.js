@@ -256,7 +256,7 @@ function initProjectFilter() {
 
       const filter = btn.dataset.filter;
       items.forEach(item => {
-        const match = filter === 'all' || item.dataset.category === filter;
+        const match = filter === 'all' || item.dataset.category.includes(filter);
         if (match) {
           item.style.opacity   = '0';
           item.style.transform = 'scale(0.94)';
