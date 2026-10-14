@@ -1563,3 +1563,52 @@ body {
         0 0 0 3px var(--bg2),
         0 0 16px rgba(124, 58, 237, 0.4);
 }
+
+/* Skill levels (replace percentage bars) */
+.skill-level {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 2px 10px;
+    border-radius: 99px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.skill-level.level-work,
+.skill-level.level-native {
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.12);
+    border-color: rgba(16, 185, 129, 0.35);
+}
+
+.skill-level.level-confident {
+    color: #a78bfa;
+    background: rgba(124, 58, 237, 0.14);
+    border-color: rgba(124, 58, 237, 0.4);
+}
+
+.skill-level.level-learning {
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.12);
+    border-color: rgba(245, 158, 11, 0.35);
+}
+
+[data-theme="light"] .skill-level.level-work,
+[data-theme="light"] .skill-level.level-native {
+    color: #047857;
+}
+
+[data-theme="light"] .skill-level.level-confident {
+    color: #6d28d9;
+}
+
+[data-theme="light"] .skill-level.level-learning {
+    color: #b45309;
+}
+
+/* Lighter skill captions in dark theme */
+[data-theme="dark"] .skill-bar-item .text-muted {
+    color: #94a3b8 !important;
+}
